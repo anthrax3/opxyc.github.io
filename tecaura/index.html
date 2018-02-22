@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge"> 
+		<meta name="viewport" content="width=device-width, initial-scale=1"> 
+		<title>TECAURA</title>
+		<meta name="description" content="Our description about the event" />
+		<meta name="keywords" content="keywords,tecaura,lbscek,tech fest" />
+		<meta name="author" content="Bony Emmanuel" />
+		<link rel="shortcut icon" href="../favicon.ico">
+		<link href="https://fonts.googleapis.com/css?family=Quicksand" rel="stylesheet">
+		<link rel="stylesheet" type="text/css" href="css/normalize.css" />
+		<link rel="stylesheet" type="text/css" href="css/demo.css" />
+		<link rel="stylesheet" type="text/css" href="css/dragdealer.css" />
+		<link rel="stylesheet" type="text/css" href="css/component.css" />
+		<link rel="stylesheet" type="text/css" href="css/events.css" />
+  		<script src="js/modernizr.custom.js"></script>
+		<!--aditional- particle motion-->
+		<link rel="stylesheet" href="css/particle-motion.css" />
+		<script type='text/javascript' src='js/jquery.particleground.js'></script>
+		<script type='text/javascript' src='js/particle-motion.js'></script>
+	</head>
+	<body>
+		<div class="container">
+			<header id="header" class="codrops-header">
+				<h1>lBSCEK CSE/IT</h1>
+				<span class="message">This mobile version does not have the slideshow switch</span>
+				<button class="slider-switch" style="display:none;">Switch view</button>
+			</header>
+			<div id="overlay" class="overlays">
+				<div class="info">
+					<h2>Demo interactions</h2>
+					<span class="info-drag">Drag Sliders</span>
+					<span class="info-keys">Use Arrows</span>
+					<button>Got it!</button>	
+				</div>
+			</div>
+			<div id="slideshow" class="dragslider">
+				<section class="img-dragger img-dragger-large dragdealer">
+					<div class="handle">
+						<div class="slide" id="#particles" data-content="content-1">
+							<div id="particles">
+								<center><h2>TEC<font color="#4285f4">A</font>URA<span>A glance into the world from the spell of keystrokes.</span></h2></center>
+								<button class="content-switch">Read more</button>
+							</div>
+						</div>
+						<div class="slide" data-content="content-2">
+							<div class="img-wrap"><img src="img/5.jpg" alt="img2"/></div>
+							<h2>About<span>A glance into our thirst for exploration and innovation.</span></h2>
+							<button class="content-switch">Read more</button>
+						</div>
+						<div class="slide" data-content="content-3">
+							<div class="img-wrap"><img src="img/7.jpg" alt="img3"/></div>
+							<h2>Events<span>Explore the moments we have framed for you.</span></h2>
+							<button class="content-switch">Read more</button>
+						</div>
+						<div class="slide" data-content="content-4">
+							<div class="img-wrap"><img src="img/4.jpg" alt="img4"/></div>
+							<h2>Contact Us<span>Know more about things that caught your eyes.</span></h2>
+							<button class="content-switch">Read more</button>
+						</div>
+					</div>
+				</section>
+				<!-- /img-dragger-->
+				<!-- Content section -->
+				<section class="pages">
+					<div class="content" data-content="content-1">
+						<h2>TEC<font color="#4285f4">A</font>URA<span>A glance into the world from the spell of keystrokes.</span></h2>
+					</div>
+					<div class="content" data-content="content-2">
+						<h2>About <span>A glance into our thirst for exploration and innovation.</span></h2>
+					</div>
+					<div class="content" data-content="content-3">
+						<h2>Events<span>Explore the moments we have framed for you.</span></h2>
+						<div class="holder">
+							<div class="inHolder">
+								Event slides<br/>
+								Animate--slide up on scroll with DOM height:On-reach-appear
+							</div>
+						</div>
+					</div>
+					<div class="content" data-content="content-4">
+						<h2>Contact<span>Know more about things that caught your eyes.</span></h2>
+					</div>
+				</section>
+			</div>
+		</div>
+		
+		<script src="js/dragdealer.js"></script>
+		<script src="js/classie.js"></script>
+		<script src="js/dragslideshow.js"></script>
+		<script>
+			//basic screen navigations
+			(function() {
+
+				var overlay = document.getElementById( 'overlay' ),
+					overlayClose = overlay.querySelector( 'button' ),
+					header = document.getElementById( 'header' )
+					switchBtnn = header.querySelector( 'button.slider-switch' ),
+					toggleBtnn = function() {
+						if( slideshow.isFullscreen ) {
+							classie.add( switchBtnn, 'view-maxi' );
+						}
+						else {
+							classie.remove( switchBtnn, 'view-maxi' );
+						}
+					},
+					toggleCtrls = function() {
+						if( !slideshow.isContent ) {
+							classie.add( header, 'hide' );
+						}
+					},
+					toggleCompleteCtrls = function() {
+						if( !slideshow.isContent ) {
+							classie.remove( header, 'hide' );
+						}
+					},
+					slideshow = new DragSlideshow( document.getElementById( 'slideshow' ), { 
+						// toggle between fullscreen and minimized slideshow
+						onToggle : toggleBtnn,
+						// toggle the main image and the content view
+						onToggleContent : toggleCtrls,
+						// toggle the main image and the content view (triggered after the animation ends)
+						onToggleContentComplete : toggleCompleteCtrls
+					}),
+					toggleSlideshow = function() {
+						slideshow.toggle();
+						toggleBtnn();
+					},
+					closeOverlay = function() {
+						classie.add( overlay, 'hide' );
+					};
+				
+				//toggling
+				// toggle between fullscreen and small slideshow
+				switchBtnn.addEventListener( 'click', toggleSlideshow );
+				// close overlay
+				overlayClose.addEventListener( 'click', closeOverlay );
+
+			}());
+		</script>
+	</body>
+</html>
