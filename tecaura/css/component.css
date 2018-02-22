@@ -15,6 +15,7 @@ body,
 .js .dragslider,
 .js .img-dragger .handle {
 	height: 100%;
+	margin:0;
 }
 
 html.js,
