@@ -360,15 +360,28 @@ button.content-switch::before {
 .pages .content h2 span {
 	color: #95a5a6;
 }
+@media (min-width:500px){
+	.pages .content p {
+		width:80%;
+		margin: 0 auto;
+		padding: 0.5em 2em;
+		line-height: 1.5;
+		text-align: left;
+		font-family: 'Lato', sans-serif;
+		font-weight:lighter;
+	}
+}
 
-.pages .content p {
-	width:80%;
-	margin: 0 auto;
-	padding: 0.5em 2em;
-	line-height: 1.5;
-	text-align: left;
-	font-family: 'Lato', sans-serif;
-	font-weight:lighter;
+@media only screen and (max-width:499px){
+	.pages .content p {
+		width:96%;
+		margin: 0 auto;
+		padding: 0.5em 2em;
+		line-height: 1.5;
+		text-align: left;
+		font-family: 'Lato', sans-serif;
+		font-weight:lighter;
+	}
 }
 .details-holder{
 	font-family: 'Lato', sans-serif;
