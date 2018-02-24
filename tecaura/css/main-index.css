@@ -195,8 +195,7 @@ a:hover, a:focus {
 
 @media screen and (max-width: 650px) {
 	.message {
-		display: block;
-		font-size:16px;
+		display: none;
 	}
 	.info span.info-keys,
 	.info span.info-switch {
