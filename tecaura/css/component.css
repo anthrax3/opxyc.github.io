@@ -370,6 +370,11 @@ button.content-switch::before {
 		font-family: 'Lato', sans-serif;
 		font-weight:lighter;
 	}
+	.details{
+		width:80%;
+		margin:auto;
+		text-align:left;
+	}
 }
 
 @media only screen and (max-width:499px){
@@ -382,7 +387,13 @@ button.content-switch::before {
 		font-family: 'Lato', sans-serif;
 		font-weight:lighter;
 	}
+	.details{
+		width:96%;
+		margin:auto;
+		text-align:left;
+	}
 }
+
 .details-holder{
 	font-family: 'Lato', sans-serif;
 	font-weight:lighter;
@@ -391,11 +402,7 @@ button.content-switch::before {
 	padding-bottom:100px;
 	margin:auto;
 }
-.details{
-	width:80%;
-	margin:auto;
-	text-align:left;
-}
+
 
 .pages .content p:last-child {
 	padding: 5em 1em 8em;
