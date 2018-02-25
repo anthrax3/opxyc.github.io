@@ -1,0 +1,91 @@
+.push-left{
+	animation-name: fadeIn;
+    animation-duration: 14s;
+}
+/* The animation code */
+ @keyframes fadeIn {
+     from {opacity:0;}
+     to {opacity:1;}
+}
+
+@media (min-width:900px){
+	.huddle-holder{
+		width:100%;
+		background-attachment: scroll;
+		height:100vh;
+		overflow:hidden;
+	}
+	.huddle-holder-content{
+		width:100%;
+		height:100vh;
+		background:rgba(0,0,0,0.6);
+	}
+	.pad{
+		padding:20px;
+	}
+	.nothing-in-bottom{padding-bottom:0px;}
+	.slider{
+		position:absolute;
+		bottom:5vh;
+		left:60%;
+		margin:auto;
+		text-align:center;
+		width:30%;
+		border-radius:40px;
+	}
+	.left{
+		padding:left;float:right;margin-left:10%;height:35px;width:80px;overflow:hidden;font-size:25px;border:1px solid #e0e0e0;transition:0.5s;
+		cursor:pointer;
+	}
+	.left:hover{background:#e0e0e0;color:#222;}
+	.indisplay{
+		opacity:1;
+		height:100vh;
+		transition:0.4s;
+	}
+	.outdisplay{
+		opacity:1;
+		height:0px;
+		transition:0.4s;
+	}
+}
+@media only screen and (max-width:899px){
+	.huddle-holder{
+		width:100%;
+		background-attachment: scroll;
+		height:100vh;
+		overflow:hidden;
+	}
+	.huddle-holder-content{
+		width:100%;
+		height:100vh;
+		background:rgba(0,0,0,0.6);
+	}
+	.pad{
+		padding:15px;
+	}
+	.nothing-in-bottom{padding-bottom:0px;}
+	.slider{
+		position:absolute;
+		bottom:5vh;
+		margin:auto;
+		text-align:center;
+		width:50%;
+		left:50%;
+	}
+	.left{
+		padding:left;float:right;margin-left:10%;height:32px;width:70px;overflow:hidden;font-size:22px;border:1px solid #e0e0e0;transition:0.5s;
+		cursor:pointer;
+	}
+	.left:hover{background:#e0e0e0;color:#222;}
+	.indisplay{
+		opacity:1;
+		height:100vh;
+		transition:0.4s;
+	}
+	.outdisplay{
+		opacity:1;
+		height:0px;
+		transition:0.4s;
+	}
+}
