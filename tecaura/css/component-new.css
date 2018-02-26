@@ -379,7 +379,7 @@ button.content-switch::before {
 
 @media only screen and (max-width:499px){
 	.pages .content p {
-		width:96%;
+		width:100%;
 		margin: 0 auto;
 		padding: 0.5em 2em;
 		line-height: 1.5;
@@ -388,7 +388,7 @@ button.content-switch::before {
 		font-weight:lighter;
 	}
 	.details{
-		width:96%;
+		width:100%;
 		margin:auto;
 		text-align:left;
 	}
@@ -411,7 +411,7 @@ button.content-switch::before {
 }
 
 .js .pages .content h2,
-.js .pages .content p {
+.js .pages .content p{
 	-webkit-transform: translate3d(0,200px,0);
 	transform: translate3d(0,200px,0);
 	-webkit-transition-property: opacity;
@@ -423,7 +423,7 @@ button.content-switch::before {
 }
 
 .pages .content.show h2,
-.pages .content.show p {
+.pages .content.show p{
 	-webkit-transition-duration: 1s;
 	transition-duration: 1s;
 	-webkit-transition-property: -webkit-transform, opacity;
