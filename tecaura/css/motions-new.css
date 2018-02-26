@@ -90,12 +90,12 @@
 @media only screen and (max-width:899px){
 	.huddle-holder{
 		width:100%;
-		height:140vh;
+		height:100vh;
 		overflow:auto;
 	}
 	.huddle-holder-content{
 		width:100%;
-		height:140vh;
+		height:100vh;
 		background:rgba(0,0,0,0.9);
 	}
 	.pad{
@@ -107,7 +107,7 @@
 	.nothing-in-bottom{padding-bottom:0px;}
 	.slider{
 		position:absolute;
-		bottom:8vh;
+		bottom:15vh;
 		margin:auto;
 		text-align:center;
 		width:50%;
